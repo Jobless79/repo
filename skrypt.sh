@@ -15,4 +15,12 @@ elif [[ $1 == "--logs" ]]; then
   for (( i=1; i<=$num_logs; i++ )); do
     echo "Log numer $i stworzony przez $0" > "log_$i.txt"
   done
+elif [[ $1 == "--help" ]]; then
+  echo "Użycie: ./skrypt.sh [Opcje]"
+  echo "Opcje:"
+  echo "  --date	Aktualna data"
+  echo "  --logs	Produkuje wybraną liczbę logów"
+  echo "  --help	Wyświetla tą wiadomość"
+else
+  echo "Zly argument - użyj --help"
 fi
